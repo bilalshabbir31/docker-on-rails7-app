@@ -1,3 +1,8 @@
+# Ruby Version
+  - ruby "3.2.2"
+
+# Rails 7
+
 # How to Run this Project
 
 ## first of all stop your postgresql locally using this command
