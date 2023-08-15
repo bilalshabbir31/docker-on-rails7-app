@@ -1,24 +1,16 @@
-# README
+# How to Run this Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## first of all stop your postgresql locally using this command
+ - sudo systemctl stop postgresql
 
-Things you may want to cover:
+RUN
 
-* Ruby version
+1. docker compose build
+2. cp .env.example .env
+3. docker compose run --rm web bin/rails db:setup
+  if docker-entrypoint file permission issue apply this command.
+    - chmod +x bin/docker-entrypoint.sh
+4. docker compose up
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## if you want to run rails console
+  - docker compose exec web bin/rails c
