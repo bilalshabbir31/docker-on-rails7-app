@@ -10,8 +10,8 @@
 
 RUN
 
-1. docker compose build
-2. cp .env.example .env
+1. cp .env.example .env
+2. docker compose build
 3. docker compose run --rm web bin/rails db:setup
   if docker-entrypoint file permission issue apply this command.
     - chmod +x bin/docker-entrypoint.sh
